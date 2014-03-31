@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<syncDesignerSurface dslVersion="1.0.0.0" Id="d2a356c2-984d-440f-ab33-68e1432fd8f3" parentDesignerName="VenteEmbarqueCache" codeGenerationMode="ClientOnly" synchronizeInOneTransaction="false" clientFileLocation="b2676690-ee12-4ff5-9a36-b8067f91258d" serverFileLocation="e6387c56-2112-474d-b4f6-d45f26629a84" isRootSyncDesigner="false" rootSyncDesignerHintPath="..\Mobilus.Service\VenteEmbarqueCache.sync" rootSyncDesignerShouldGenerateCode="true" isClientSyncDesigner="true" isServerSyncDesigner="false" changeTrackingType="SqlServerChangeTracking" xmlns="http://schemas.microsoft.com/dsltools/SyncDesigner">
+  <syncTables>
+    <syncTable Id="79d398db-8225-48cb-912b-50d4fb55a67f" name="XpoAgentTerrainSyncTable" syncDirection="DownloadOnly" creationOptions="DropExistingOrCreateNewTable" tableName="XpoAgentTerrain" fullTableName="dbo.XpoAgentTerrain" deletedDateColumnName="DeletionDate" transactionIndex="0">
+      <syncGroup>
+        <syncGroupMoniker name="/d2a356c2-984d-440f-ab33-68e1432fd8f3/XpoAgentTerrainSyncGroup" />
+      </syncGroup>
+    </syncTable>
+    <syncTable Id="bd8428ef-86c0-47bf-b426-4faab17911db" name="XpoCategorySyncTable" syncDirection="DownloadOnly" creationOptions="DropExistingOrCreateNewTable" tableName="XpoCategory" fullTableName="dbo.XpoCategory" deletedDateColumnName="DeletionDate" transactionIndex="0">
+      <syncGroup>
+        <syncGroupMoniker name="/d2a356c2-984d-440f-ab33-68e1432fd8f3/XpoCategorySyncGroup" />
+      </syncGroup>
+    </syncTable>
+    <syncTable Id="4ed6304b-479f-4d31-ab52-7bf3fe226bd5" name="XpoClientSyncTable" syncDirection="DownloadOnly" creationOptions="DropExistingOrCreateNewTable" tableName="XpoClient" fullTableName="dbo.XpoClient" deletedDateColumnName="DeletionDate" transactionIndex="0">
+      <syncGroup>
+        <syncGroupMoniker name="/d2a356c2-984d-440f-ab33-68e1432fd8f3/XpoClientSyncGroup" />
+      </syncGroup>
+    </syncTable>
+    <syncTable Id="1550e538-4008-404b-bc4d-ce9f49800dd2" name="XpoMarqueSyncTable" syncDirection="DownloadOnly" creationOptions="DropExistingOrCreateNewTable" tableName="XpoMarque" fullTableName="dbo.XpoMarque" deletedDateColumnName="DeletionDate" transactionIndex="0">
+      <syncGroup>
+        <syncGroupMoniker name="/d2a356c2-984d-440f-ab33-68e1432fd8f3/XpoMarqueSyncGroup" />
+      </syncGroup>
+    </syncTable>
+    <syncTable Id="65315a4b-f8c6-49ea-b4ed-e0e38bb99df4" name="XpoOrderSyncTable" syncDirection="DownloadOnly" creationOptions="DropExistingOrCreateNewTable" tableName="XpoOrder" fullTableName="dbo.XpoOrder" deletedDateColumnName="DeletionDate" transactionIndex="0">
+      <syncGroup>
+        <syncGroupMoniker name="/d2a356c2-984d-440f-ab33-68e1432fd8f3/XpoOrderSyncGroup" />
+      </syncGroup>
+    </syncTable>
+    <syncTable Id="85566977-137a-47e3-a252-6f2f7ecf2cee" name="XpoOrderLineSyncTable" syncDirection="DownloadOnly" creationOptions="DropExistingOrCreateNewTable" tableName="XpoOrderLine" fullTableName="dbo.XpoOrderLine" deletedDateColumnName="DeletionDate" transactionIndex="0">
+      <syncGroup>
+        <syncGroupMoniker name="/d2a356c2-984d-440f-ab33-68e1432fd8f3/XpoOrderLineSyncGroup" />
+      </syncGroup>
+    </syncTable>
+    <syncTable Id="a8028a75-b32f-476b-a04a-59f20f72036d" name="XpoProductSyncTable" syncDirection="DownloadOnly" creationOptions="DropExistingOrCreateNewTable" tableName="XpoProduct" fullTableName="dbo.XpoProduct" deletedDateColumnName="DeletionDate" transactionIndex="0">
+      <syncGroup>
+        <syncGroupMoniker name="/d2a356c2-984d-440f-ab33-68e1432fd8f3/XpoProductSyncGroup" />
+      </syncGroup>
+    </syncTable>
+    <syncTable Id="865eefe7-27c4-4f0f-a0c6-777e5a485f88" name="XpoProductLineSyncTable" syncDirection="DownloadOnly" creationOptions="DropExistingOrCreateNewTable" tableName="XpoProductLine" fullTableName="dbo.XpoProductLine" deletedDateColumnName="DeletionDate" transactionIndex="0">
+      <syncGroup>
+        <syncGroupMoniker name="/d2a356c2-984d-440f-ab33-68e1432fd8f3/XpoProductLineSyncGroup" />
+      </syncGroup>
+    </syncTable>
+    <syncTable Id="5fb3831c-0948-4599-9e9e-f63b76e8c381" name="XpoSectorSyncTable" syncDirection="DownloadOnly" creationOptions="DropExistingOrCreateNewTable" tableName="XpoSector" fullTableName="dbo.XpoSector" deletedDateColumnName="DeletionDate" transactionIndex="0">
+      <syncGroup>
+        <syncGroupMoniker name="/d2a356c2-984d-440f-ab33-68e1432fd8f3/XpoSectorSyncGroup" />
+      </syncGroup>
+    </syncTable>
+    <syncTable Id="c0b4c8d4-224e-4364-8bcf-902a4defeb8a" name="XpoStockSyncTable" syncDirection="DownloadOnly" creationOptions="DropExistingOrCreateNewTable" tableName="XpoStock" fullTableName="dbo.XpoStock" deletedDateColumnName="DeletionDate" transactionIndex="0">
+      <syncGroup>
+        <syncGroupMoniker name="/d2a356c2-984d-440f-ab33-68e1432fd8f3/XpoStockSyncGroup" />
+      </syncGroup>
+    </syncTable>
+  </syncTables>
+  <syncGroups>
+    <syncGroup Id="b539f137-e780-4293-95a2-e30f31e59057" name="XpoAgentTerrainSyncGroup" />
+    <syncGroup Id="0c57664a-8061-4068-9afb-7c43436df2c8" name="XpoCategorySyncGroup" />
+    <syncGroup Id="49299b90-7cb3-4675-b04c-b9315dfb19fe" name="XpoClientSyncGroup" />
+    <syncGroup Id="8fece934-b408-4706-a7c9-1734dc3a0239" name="XpoMarqueSyncGroup" />
+    <syncGroup Id="ab9674ad-23aa-4524-a513-3df09ff79ba7" name="XpoOrderSyncGroup" />
+    <syncGroup Id="4864c18e-ef08-4fae-882e-19d796dd0b9a" name="XpoOrderLineSyncGroup" />
+    <syncGroup Id="34d53f97-5cfc-4c8e-a352-582b0464e02a" name="XpoProductSyncGroup" />
+    <syncGroup Id="24ead6da-7b93-4c58-9d54-5e36fa605913" name="XpoProductLineSyncGroup" />
+    <syncGroup Id="b786b817-7b90-45c8-a520-10c38373cf95" name="XpoSectorSyncGroup" />
+    <syncGroup Id="163129fe-31f2-4dca-9666-b56f47d7b55d" name="XpoStockSyncGroup" />
+  </syncGroups>
+  <clientSyncProvider>
+    <clientSyncProvider Id="cfc356e7-3b86-43e5-ab5b-96324dccbd94" name="VenteEmbarqueCacheClientSyncProvider">
+      <syncConnection>
+        <syncConnectionMoniker name="/d2a356c2-984d-440f-ab33-68e1432fd8f3/ClientConnection" />
+      </syncConnection>
+    </clientSyncProvider>
+  </clientSyncProvider>
+  <syncAgent>
+    <syncAgent name="VenteEmbarqueCacheSyncAgent" synchronizeInOneTransaction="false">
+      <clientSyncProvider>
+        <clientSyncProviderMoniker name="/d2a356c2-984d-440f-ab33-68e1432fd8f3/VenteEmbarqueCacheClientSyncProvider" />
+      </clientSyncProvider>
+      <syncTables>
+        <syncTableMoniker name="/d2a356c2-984d-440f-ab33-68e1432fd8f3/XpoAgentTerrainSyncTable" />
+        <syncTableMoniker name="/d2a356c2-984d-440f-ab33-68e1432fd8f3/XpoCategorySyncTable" />
+        <syncTableMoniker name="/d2a356c2-984d-440f-ab33-68e1432fd8f3/XpoClientSyncTable" />
+        <syncTableMoniker name="/d2a356c2-984d-440f-ab33-68e1432fd8f3/XpoMarqueSyncTable" />
+        <syncTableMoniker name="/d2a356c2-984d-440f-ab33-68e1432fd8f3/XpoOrderSyncTable" />
+        <syncTableMoniker name="/d2a356c2-984d-440f-ab33-68e1432fd8f3/XpoOrderLineSyncTable" />
+        <syncTableMoniker name="/d2a356c2-984d-440f-ab33-68e1432fd8f3/XpoProductSyncTable" />
+        <syncTableMoniker name="/d2a356c2-984d-440f-ab33-68e1432fd8f3/XpoProductLineSyncTable" />
+        <syncTableMoniker name="/d2a356c2-984d-440f-ab33-68e1432fd8f3/XpoSectorSyncTable" />
+        <syncTableMoniker name="/d2a356c2-984d-440f-ab33-68e1432fd8f3/XpoStockSyncTable" />
+      </syncTables>
+    </syncAgent>
+  </syncAgent>
+  <syncConnections>
+    <syncConnection Id="9177faf4-3398-48f4-8992-22fa1cdf1430" connectionString="Data Source=C:\Users\Administrator\Documents\Visual Studio 2008\Projects\Project1\mobilus\Mobilus.SmartDevice\Inventaire.sdf;Max Database Size=2047" providerInvariantName="Microsoft.SqlServerCe.Client.3.5" name="ClientConnection" connectionDisplayString="Inventaire.sdf" isAppSettings="false" appSettingsObjectName="&lt;&lt;FSIM&gt;&gt;" appSettingsPropertyReference="" />
+  </syncConnections>
+</syncDesignerSurface>

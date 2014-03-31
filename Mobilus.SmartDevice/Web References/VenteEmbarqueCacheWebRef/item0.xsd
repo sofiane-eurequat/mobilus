@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.1.5:8731/VenteEmbarqueCacheSyncService/?xsd=xsd1" namespace="http://microsoft.com/wsdl/types/" />
+  <xs:element name="ApplyChanges">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="groupMetadata" type="tns:SyncGroupMetadata" />
+        <xs:element minOccurs="0" maxOccurs="1" name="dataSet">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="syncSession" type="tns:SyncSession" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="SyncGroupMetadata">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="GroupName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="NewAnchor" type="tns:SyncAnchor" />
+      <xs:element minOccurs="0" maxOccurs="1" name="MaxAnchor" type="tns:SyncAnchor" />
+      <xs:element minOccurs="1" maxOccurs="1" name="BatchCount" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TablesMetadata" type="tns:ArrayOfSyncTableMetadata" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SyncAnchor">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Anchor" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfSyncTableMetadata">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SyncTableMetadata" nillable="true" type="tns:SyncTableMetadata" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SyncTableMetadata">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="TableName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="SyncDirection" type="tns:SyncDirection" />
+      <xs:element minOccurs="0" maxOccurs="1" name="LastSentAnchor" type="tns:SyncAnchor" />
+      <xs:element minOccurs="0" maxOccurs="1" name="LastReceivedAnchor" type="tns:SyncAnchor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="SyncDirection">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DownloadOnly" />
+      <xs:enumeration value="UploadOnly" />
+      <xs:enumeration value="Bidirectional" />
+      <xs:enumeration value="Snapshot" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="SyncSession">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="OriginatorId" type="xs:int" />
+      <xs:element xmlns:q1="http://microsoft.com/wsdl/types/" minOccurs="1" maxOccurs="1" name="ClientId" type="q1:guid" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CustomParameters" type="tns:SyncParameter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SyncParameter">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Value" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SyncContext">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="GroupProgress" type="tns:SyncGroupProgress" />
+      <xs:element minOccurs="1" maxOccurs="1" name="OriginatorId" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="NewAnchor" type="tns:SyncAnchor" />
+      <xs:element minOccurs="0" maxOccurs="1" name="MaxAnchor" type="tns:SyncAnchor" />
+      <xs:element minOccurs="1" maxOccurs="1" name="BatchCount" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DataSet">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xs:schema" />
+            <xs:any />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SyncGroupProgress">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="GroupName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TablesProgress" type="tns:ArrayOfSyncTableProgress" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfSyncTableProgress">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SyncTableProgress" nillable="true" type="tns:SyncTableProgress" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SyncTableProgress">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="TableName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Inserts" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Updates" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Deletes" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ChangesApplied" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ChangesFailed" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Conflicts" type="tns:ArrayOfSyncConflict" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfSyncConflict">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SyncConflict" nillable="true" type="tns:SyncConflict" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SyncConflict">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="ConflictType" type="tns:ConflictType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="SyncStage" type="tns:SyncStage" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ServerChange">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+            <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="ClientChange">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+            <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ConflictType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="ErrorsOccurred" />
+      <xs:enumeration value="ClientUpdateServerUpdate" />
+      <xs:enumeration value="ClientUpdateServerDelete" />
+      <xs:enumeration value="ClientDeleteServerUpdate" />
+      <xs:enumeration value="ClientInsertServerInsert" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SyncStage">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ReadingSchema" />
+      <xs:enumeration value="CreatingSchema" />
+      <xs:enumeration value="ReadingMetadata" />
+      <xs:enumeration value="CreatingMetadata" />
+      <xs:enumeration value="DeletingMetadata" />
+      <xs:enumeration value="WritingMetadata" />
+      <xs:enumeration value="UploadingChanges" />
+      <xs:enumeration value="DownloadingChanges" />
+      <xs:enumeration value="ApplyingInserts" />
+      <xs:enumeration value="ApplyingUpdates" />
+      <xs:enumeration value="ApplyingDeletes" />
+      <xs:enumeration value="GettingInserts" />
+      <xs:enumeration value="GettingUpdates" />
+      <xs:enumeration value="GettingDeletes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ApplyChangesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ApplyChangesResult" type="tns:SyncContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChanges">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="groupMetadata" type="tns:SyncGroupMetadata" />
+        <xs:element minOccurs="0" maxOccurs="1" name="syncSession" type="tns:SyncSession" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChangesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetChangesResult" type="tns:SyncContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchema">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="tableNames" type="tns:ArrayOfString" />
+        <xs:element minOccurs="0" maxOccurs="1" name="syncSession" type="tns:SyncSession" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfString">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SyncSchema">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="SchemaDataSet">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xs:schema" />
+            <xs:any />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetSchemaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetSchemaResult" type="tns:SyncSchema" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServerInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="syncSession" type="tns:SyncSession" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="SyncServerInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="TablesInfo" type="tns:ArrayOfSyncTableInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfSyncTableInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SyncTableInfo" nillable="true" type="tns:SyncTableInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SyncTableInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="TableName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Description" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetServerInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="GetServerInfoResult" type="tns:SyncServerInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

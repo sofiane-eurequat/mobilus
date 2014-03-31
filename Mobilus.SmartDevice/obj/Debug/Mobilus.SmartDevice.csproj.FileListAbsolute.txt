@@ -1,0 +1,14 @@
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\Project1\mobilus\Mobilus.SmartDevice\bin\Debug\Inventaire.sdf
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\Project1\mobilus\Mobilus.SmartDevice\bin\Debug\Mobilus.SmartDevice.exe
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\Project1\mobilus\Mobilus.SmartDevice\bin\Debug\Mobilus.SmartDevice.pdb
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\Project1\mobilus\Mobilus.SmartDevice\bin\Debug\Microsoft.Synchronization.Data.dll
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\Project1\mobilus\Mobilus.SmartDevice\bin\Debug\Microsoft.Synchronization.Data.SqlServerCe.dll
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\Project1\mobilus\Mobilus.SmartDevice\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\Project1\mobilus\Mobilus.SmartDevice\obj\Debug\Mobilus.SmartDevice.Properties.Resources.resources
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\Project1\mobilus\Mobilus.SmartDevice\obj\Debug\Mobilus.SmartDevice.csproj.GenerateResource.Cache
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\Project1\mobilus\Mobilus.SmartDevice\obj\Debug\Mobilus.SmartDevice.exe
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\Project1\mobilus\Mobilus.SmartDevice\obj\Debug\Mobilus.SmartDevice.pdb
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\Project1\mobilus\Mobilus.SmartDevice\obj\Debug\Mobilus.SmartDevice.Form1.resources
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\Project1\mobilus\Mobilus.SmartDevice\obj\Debug\Mobilus.SmartDevice.XpoOrderEditViewDialog.resources
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\Project1\mobilus\Mobilus.SmartDevice\obj\Debug\Mobilus.SmartDevice.XpoOrderSummaryViewDialog.resources
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\Project1\mobilus\Mobilus.SmartDevice\bin\Debug\System.Data.SqlServerCe.dll

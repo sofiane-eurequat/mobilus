@@ -1,0 +1,117 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E6387C56-2112-474D-B4F6-D45F26629A84}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mobilus.Service</RootNamespace>
+    <AssemblyName>Mobilus.Service</AssemblyName>
+    <ProjectTypeGuids>{3D9AD99F-2412-4246-B90B-4EAA41C64699};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <StartArguments>/client:"WcfTestClient.exe"</StartArguments>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Synchronization.Data, Version=1.0.0.0" />
+    <Reference Include="Microsoft.Synchronization.Data.Server, Version=1.0.0.0" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="VenteEmbarqueCache.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VenteEmbarqueCache.sync</DependentUpon>
+    </Compile>
+    <Compile Include="VenteEmbarqueCache.SyncContract.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SQLScripts\VenteEmbarqueCache.dbo.XpoAgentTerrain.sql" />
+    <None Include="SQLScripts\VenteEmbarqueCache.dbo.XpoCategory.sql" />
+    <None Include="SQLScripts\VenteEmbarqueCache.dbo.XpoClient.sql" />
+    <None Include="SQLScripts\VenteEmbarqueCache.dbo.XpoMarque.sql" />
+    <None Include="SQLScripts\VenteEmbarqueCache.dbo.XpoOrder.sql" />
+    <None Include="SQLScripts\VenteEmbarqueCache.dbo.XpoOrderLine.sql" />
+    <None Include="SQLScripts\VenteEmbarqueCache.dbo.XpoProduct.sql" />
+    <None Include="SQLScripts\VenteEmbarqueCache.dbo.XpoProductLine.sql" />
+    <None Include="SQLScripts\VenteEmbarqueCache.dbo.XpoSector.sql" />
+    <None Include="SQLScripts\VenteEmbarqueCache.dbo.XpoStock.sql" />
+    <None Include="SQLScripts\VenteEmbarqueCache.Inventaire.sql" />
+    <None Include="SQLUndoScripts\VenteEmbarqueCache.dbo.XpoAgentTerrain.disable.sql" />
+    <None Include="SQLUndoScripts\VenteEmbarqueCache.dbo.XpoCategory.disable.sql" />
+    <None Include="SQLUndoScripts\VenteEmbarqueCache.dbo.XpoClient.disable.sql" />
+    <None Include="SQLUndoScripts\VenteEmbarqueCache.dbo.XpoMarque.disable.sql" />
+    <None Include="SQLUndoScripts\VenteEmbarqueCache.dbo.XpoOrder.disable.sql" />
+    <None Include="SQLUndoScripts\VenteEmbarqueCache.dbo.XpoOrderLine.disable.sql" />
+    <None Include="SQLUndoScripts\VenteEmbarqueCache.dbo.XpoProduct.disable.sql" />
+    <None Include="SQLUndoScripts\VenteEmbarqueCache.dbo.XpoProductLine.disable.sql" />
+    <None Include="SQLUndoScripts\VenteEmbarqueCache.dbo.XpoSector.disable.sql" />
+    <None Include="SQLUndoScripts\VenteEmbarqueCache.dbo.XpoStock.disable.sql" />
+    <None Include="SQLUndoScripts\VenteEmbarqueCache.Inventaire.disable.sql" />
+    <None Include="VenteEmbarqueCache.sync">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSyncGenerator</Generator>
+      <LastGenOutput>VenteEmbarqueCache.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{3D9AD99F-2412-4246-B90B-4EAA41C64699}">
+        <WcfProjectProperties>
+          <AutoStart>True</AutoStart>
+        </WcfProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

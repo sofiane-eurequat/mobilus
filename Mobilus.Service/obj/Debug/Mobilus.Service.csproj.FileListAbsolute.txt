@@ -1,0 +1,6 @@
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\Project1\mobilus\Mobilus.Service\bin\Debug\Mobilus.Service.dll.config
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\Project1\mobilus\Mobilus.Service\bin\Debug\Mobilus.Service.dll
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\Project1\mobilus\Mobilus.Service\bin\Debug\Mobilus.Service.pdb
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\Project1\mobilus\Mobilus.Service\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\Project1\mobilus\Mobilus.Service\obj\Debug\Mobilus.Service.dll
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\Project1\mobilus\Mobilus.Service\obj\Debug\Mobilus.Service.pdb

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="VenteEmbarqueCacheSyncService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.1.5:8731/VenteEmbarqueCacheSyncService/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.1.5:8731/VenteEmbarqueCacheSyncService/?xsd=xsd1" namespace="http://microsoft.com/wsdl/types/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IVenteEmbarqueCacheSyncContract_ApplyChanges_InputMessage">
+    <wsdl:part name="parameters" element="tns:ApplyChanges" />
+  </wsdl:message>
+  <wsdl:message name="IVenteEmbarqueCacheSyncContract_ApplyChanges_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ApplyChangesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVenteEmbarqueCacheSyncContract_GetChanges_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChanges" />
+  </wsdl:message>
+  <wsdl:message name="IVenteEmbarqueCacheSyncContract_GetChanges_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChangesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVenteEmbarqueCacheSyncContract_GetSchema_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchema" />
+  </wsdl:message>
+  <wsdl:message name="IVenteEmbarqueCacheSyncContract_GetSchema_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVenteEmbarqueCacheSyncContract_GetServerInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServerInfo" />
+  </wsdl:message>
+  <wsdl:message name="IVenteEmbarqueCacheSyncContract_GetServerInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServerInfoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IVenteEmbarqueCacheSyncContract">
+    <wsdl:operation name="ApplyChanges">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVenteEmbarqueCacheSyncContract/ApplyChanges" message="tns:IVenteEmbarqueCacheSyncContract_ApplyChanges_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVenteEmbarqueCacheSyncContract/ApplyChangesResponse" message="tns:IVenteEmbarqueCacheSyncContract_ApplyChanges_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChanges">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVenteEmbarqueCacheSyncContract/GetChanges" message="tns:IVenteEmbarqueCacheSyncContract_GetChanges_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVenteEmbarqueCacheSyncContract/GetChangesResponse" message="tns:IVenteEmbarqueCacheSyncContract_GetChanges_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSchema">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVenteEmbarqueCacheSyncContract/GetSchema" message="tns:IVenteEmbarqueCacheSyncContract_GetSchema_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVenteEmbarqueCacheSyncContract/GetSchemaResponse" message="tns:IVenteEmbarqueCacheSyncContract_GetSchema_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServerInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVenteEmbarqueCacheSyncContract/GetServerInfo" message="tns:IVenteEmbarqueCacheSyncContract_GetServerInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVenteEmbarqueCacheSyncContract/GetServerInfoResponse" message="tns:IVenteEmbarqueCacheSyncContract_GetServerInfo_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IVenteEmbarqueCacheSyncContract" type="tns:IVenteEmbarqueCacheSyncContract">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ApplyChanges">
+      <soap:operation soapAction="http://tempuri.org/IVenteEmbarqueCacheSyncContract/ApplyChanges" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChanges">
+      <soap:operation soapAction="http://tempuri.org/IVenteEmbarqueCacheSyncContract/GetChanges" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSchema">
+      <soap:operation soapAction="http://tempuri.org/IVenteEmbarqueCacheSyncContract/GetSchema" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerInfo">
+      <soap:operation soapAction="http://tempuri.org/IVenteEmbarqueCacheSyncContract/GetServerInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="VenteEmbarqueCacheSyncService">
+    <wsdl:port name="BasicHttpBinding_IVenteEmbarqueCacheSyncContract" binding="tns:BasicHttpBinding_IVenteEmbarqueCacheSyncContract">
+      <soap:address location="http://192.168.1.5:8731/VenteEmbarqueCacheSyncService/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
